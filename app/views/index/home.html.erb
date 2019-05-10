@@ -1,0 +1,14 @@
+<div> My Shop </div>
+
+<h1> Welcome </h1>
+
+<div> Balance: <%= @balance%> </div>
+
+These are your virtual accounts to add your balance
+<%  @virtual_accounts.each do |account| %>
+	<div>
+		<div> <b> Bank Name: </b> <%= account["bank_abbrev"] %> </div>
+		<div> <b> Account Number: </b> <%= account["account_no"] %> </div>
+	</div>
+	<br/>
+<% end %>
