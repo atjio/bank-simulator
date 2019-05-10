@@ -10,13 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_10_151425) do
-
-  create_table "banks", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 2019_05_10_155350) do
 
   create_table "currencies", force: :cascade do |t|
     t.string "name"
@@ -47,14 +41,6 @@ ActiveRecord::Schema.define(version: 2019_05_10_151425) do
     t.index ["virtual_account_id"], name: "index_transfers_on_virtual_account_id"
   end
 
-  create_table "user_accounts", force: :cascade do |t|
-    t.integer "user_id"
-    t.string "xfers_user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_user_accounts_on_user_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "email"
@@ -63,16 +49,6 @@ ActiveRecord::Schema.define(version: 2019_05_10_151425) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "xfers_api_key"
-  end
-
-  create_table "virtual_accounts", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "bank_id"
-    t.string "account_number"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["bank_id"], name: "index_virtual_accounts_on_bank_id"
-    t.index ["user_id"], name: "index_virtual_accounts_on_user_id"
   end
 
 end

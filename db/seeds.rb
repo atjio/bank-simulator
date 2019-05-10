@@ -14,23 +14,6 @@ User.create!([
 	}
 ])
 
-
-Bank.create!([
-	{id: 1, name: "DBS"}
-])
-
-UserAccount.create!([
-	{user_id: 1, xfers_user_id: "user_gksj43jgzgqv"}
-])
-
-VirtualAccount.create!([
-	{
-		user_id: 1,
-		bank_id: 1,
-		account_number: 123423453456
-	}
-])
-
 Currency.create!([
 	{name: "IDR", symbol: "Rp"},
 	{name: "SGD", symbol: "S$"},
