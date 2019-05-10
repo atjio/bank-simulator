@@ -10,7 +10,7 @@ User.create!([
 		id: 1, 
 		username: "Tony", 
 		email: "anthony.tjio@outlook.co.id",
-		xfers_api_key: "2zsujd47H3-UmsxDL784beVnYbxCYCzL4psSbwZ_Ngk" 
+		xfers_api_key: "3dehFLadwsxNUWe_sSp5ymBaQJB8yLzPyM1sRgkTDPk" 
 	}
 ])
 

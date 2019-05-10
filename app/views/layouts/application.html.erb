@@ -10,6 +10,12 @@
   </head>
 
   <body>
+    <div> <a href='/index/home'> Home</a>  </div>
+    <div> <a href='/store/index'> Shop</a> </div>
+
+    <h1> Welcome </h1>
+
+    <div> Balance: <%= current_user.balance%> </div>
     <%= yield %>
   </body>
 </html>

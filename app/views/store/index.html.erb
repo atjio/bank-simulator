@@ -1,0 +1,8 @@
+<%  @products.each do |product| %>
+	<div>
+		<a href= "/store/purchase?product_id=<%= product.id%>" <div> <img src= "<%= product.image_url %>" > </div> </a>
+		<div> <b> Name: </b> <%= product.name %> </div>
+		<div> <b> Price: </b> <%= product.price %> </div>
+	</div>
+	<br/>
+<% end %>
