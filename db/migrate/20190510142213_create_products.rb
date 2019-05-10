@@ -4,7 +4,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
   	  t.string :name
   	  t.string :image_url # If this is timeless, should've made this a proper object instead of a single string
       t.integer :price
-      t.references :currency
+      t.references :currency, foreign_key: true
 
       t.timestamps
     end

@@ -1,3 +1,3 @@
 class Product < ApplicationRecord
-	has_one :currency
+	belongs_to :currency
 end

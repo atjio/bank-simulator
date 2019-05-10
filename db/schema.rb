@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_10_145208) do
+ActiveRecord::Schema.define(version: 2019_05_10_151425) do
 
   create_table "banks", force: :cascade do |t|
     t.string "name"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 2019_05_10_145208) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "symbol"
+    t.index ["name"], name: "index_currencies_on_name"
   end
 
   create_table "products", force: :cascade do |t|
@@ -35,10 +37,13 @@ ActiveRecord::Schema.define(version: 2019_05_10_145208) do
   end
 
   create_table "transfers", force: :cascade do |t|
-    t.string "source_account"
+    t.string "user_account"
     t.integer "virtual_account_id"
+    t.integer "amount"
+    t.integer "currencies_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["currencies_id"], name: "index_transfers_on_currencies_id"
     t.index ["virtual_account_id"], name: "index_transfers_on_virtual_account_id"
   end
 
@@ -57,6 +62,7 @@ ActiveRecord::Schema.define(version: 2019_05_10_145208) do
     t.string "password_hash"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "xfers_api_key"
   end
 
   create_table "virtual_accounts", force: :cascade do |t|
