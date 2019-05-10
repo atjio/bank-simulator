@@ -4,4 +4,4 @@
 - run `bundle install` to ensure the gems are installed
 - run `rake db:migrate && rake db:seed`
 - run `rails s`
-- open `localhost:3000'
+- open `localhost:3000/index/home'
